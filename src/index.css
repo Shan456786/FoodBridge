@@ -1,0 +1,255 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  /* Brand colours. Theme-aware ones read a variable that .dark redefines. */
+  --color-forest: var(--forest);
+  --color-forest-50: var(--forest-50);
+  --color-forest-100: var(--forest-100);
+  --color-forest-700: #1d4d37;
+  --color-forest-900: #0e281c;
+  --color-emerald-brand: #10b981;
+  --color-ink: var(--ink);
+  /* Brand green for text, borders and rings (forest on light, mint on dark). */
+  --color-brand: var(--brand);
+  /* Fixed light mint for text on permanently dark forest surfaces. */
+  --color-mint-50: #ecfdf5;
+  --color-mint-100: #d1fae5;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: light;
+  --ink: #17231d;
+  --brand: #163d2b;
+  --forest: #163d2b;
+  --forest-50: #eef5f1;
+  --forest-100: #d6e7dd;
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 0.04), 0 1px 3px rgb(16 24 40 / 0.03);
+  --background: #f8faf8;
+  --foreground: #17231d;
+  --card: #ffffff;
+  --card-foreground: #17231d;
+  --popover: #ffffff;
+  --popover-foreground: #17231d;
+  --primary: #163d2b;
+  --primary-foreground: #f4fbf7;
+  --secondary: #e8f3ed;
+  --secondary-foreground: #163d2b;
+  --muted: #f1f4f2;
+  --muted-foreground: #64748b;
+  --accent: #ecf6f0;
+  --accent-foreground: #163d2b;
+  --destructive: #dc2626;
+  --border: #e3e9e5;
+  --input: #dbe3de;
+  --ring: #10b981;
+  --chart-1: #163d2b;
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #64748b;
+  --chart-5: #6ee7b7;
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #17231d;
+  --sidebar-primary: #163d2b;
+  --sidebar-primary-foreground: #f4fbf7;
+  --sidebar-accent: #eef5f1;
+  --sidebar-accent-foreground: #163d2b;
+  --sidebar-border: #e3e9e5;
+  --sidebar-ring: #10b981;
+}
+
+.dark {
+  color-scheme: dark;
+  --ink: #eaf2ed;
+  --brand: #6ee7b7;
+  --forest: #1c4f38;
+  --forest-50: #143024;
+  --forest-100: #1b3a2c;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.3);
+  --background: #0b1410;
+  --foreground: #e3ece6;
+  --card: #111c16;
+  --card-foreground: #e3ece6;
+  --popover: #131f19;
+  --popover-foreground: #e3ece6;
+  --primary: #34c88a;
+  --primary-foreground: #04170e;
+  --secondary: #17291f;
+  --secondary-foreground: #d1fae5;
+  --muted: #16221c;
+  --muted-foreground: #97a8a0;
+  --accent: #183026;
+  --accent-foreground: #d1fae5;
+  --destructive: #f87171;
+  --border: #24362d;
+  --input: #2c4036;
+  --ring: #34d399;
+  --chart-1: #6ee7b7;
+  --chart-2: #10b981;
+  --chart-3: #fbbf24;
+  --chart-4: #94a3b8;
+  --chart-5: #047857;
+  --sidebar: #0e1813;
+  --sidebar-foreground: #e3ece6;
+  --sidebar-primary: #34c88a;
+  --sidebar-primary-foreground: #04170e;
+  --sidebar-accent: #17291f;
+  --sidebar-accent-foreground: #d1fae5;
+  --sidebar-border: #1f3027;
+  --sidebar-ring: #34d399;
+
+  /*
+   * Dark compatibility for the fixed Tailwind palette shades that pages use for
+   * tinted surfaces (…-50/100/200) and dark text (…-700/800/900). Remapping the
+   * palette variables keeps every existing status badge, alert and chip legible
+   * without per-page dark: variants. Mid shades (400–600) work on both themes.
+   */
+  --color-slate-50: #131d18;
+  --color-slate-100: #18241e;
+  --color-slate-200: #22302a;
+  --color-slate-300: #3a4a43;
+  --color-slate-600: #b6c2bd;
+  --color-slate-700: #d3dcd8;
+  --color-emerald-50: #0f2a1f;
+  --color-emerald-100: #123326;
+  --color-emerald-200: #1a4a36;
+  --color-emerald-700: #6ee7b7;
+  --color-emerald-800: #a7f3d0;
+  --color-emerald-900: #d1fae5;
+  --color-amber-50: #261d0d;
+  --color-amber-100: #33270f;
+  --color-amber-200: #4d3a14;
+  --color-amber-300: #6b5119;
+  --color-amber-700: #fcd34d;
+  --color-amber-800: #fde68a;
+  --color-amber-900: #fef3c7;
+  --color-amber-950: #fffbeb;
+  --color-red-50: #2a1414;
+  --color-red-100: #381818;
+  --color-red-200: #552222;
+  --color-red-700: #fca5a5;
+  --color-red-800: #fecaca;
+  --color-sky-50: #0f2230;
+  --color-sky-200: #1d3d52;
+  --color-sky-700: #7dd3fc;
+  --color-sky-900: #e0f2fe;
+  --color-orange-50: #2b1a0e;
+  --color-orange-700: #fdba74;
+  --color-indigo-50: #191c38;
+  --color-indigo-700: #a5b4fc;
+  --color-rose-50: #2b1219;
+  --color-rose-700: #fda4af;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-emerald-brand) 25%, transparent);
+  }
+  :focus-visible {
+    outline-offset: 2px;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  h1, h2, h3, h4 {
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(22 61 43 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(22 61 43 / 0.05) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+  .dark .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(110 231 183 / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(110 231 183 / 0.04) 1px, transparent 1px);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+}
+
+/* Applied briefly while the theme changes so colours cross-fade instead of snapping. */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    fill 220ms ease,
+    stroke 220ms ease !important;
+  transition-delay: 0ms !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.theme-transition,
+  html.theme-transition * {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#163D2B" />
+    <meta name="description" content="FoodBridge connects surplus food from local businesses with nearby verified organizations that can rescue it safely, quickly and transparently." />
+    <title>FoodBridge — Food rescue, before time runs out</title>
+    <script>
+      // Apply the saved theme before first paint (see src/lib/preferences.ts) to avoid a light flash.
+      try {
+        var t = localStorage.getItem('fb.theme')
+        var dark = t === 'dark' || ((t === null || t === 'system') && matchMedia('(prefers-color-scheme: dark)').matches)
+        if (dark) {
+          document.documentElement.classList.add('dark')
+          document.documentElement.style.colorScheme = 'dark'
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
