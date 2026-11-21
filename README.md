@@ -4,7 +4,7 @@
 
 FoodBridge is a hyperlocal food-rescue platform that connects restaurants, college canteens, banquet halls, grocery stores and community kitchens with verified NGOs, food banks and volunteers — and makes every rescue traceable, from listing to a code-verified handover.
 
-Built by **Team Nexorithm** · Category: Food-Expiry Rescue & Local Surplus Exchange.
+Category: Food-Expiry Rescue & Local Surplus Exchange.
 
 > FoodBridge coordinates food redistribution. It does **not** certify food safety. Participating organizations remain responsible for applicable food-safety requirements (in India, FSSAI).
 
